@@ -465,7 +465,6 @@ a.btn-red:hover {
     color: var(--Grey-600);
     line-height: 1.5;
     margin-top: 1rem;
-    width: 33.75rem;
 }
 
 .btn-accordion {
