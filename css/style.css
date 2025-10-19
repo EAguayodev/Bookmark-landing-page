@@ -39,7 +39,9 @@ body {
     width: 100%;
 }
 
-.logo {}
+.logo-second {
+    display: none;
+}
 
 .nav-links {
     color: var(--Grey-600);
@@ -220,8 +222,6 @@ a.btn-red:hover {
     align-items: center;
 }
 
-.tab {}
-
 .tab-1-button:after {
     content: "";
     display: block;
@@ -233,8 +233,6 @@ a.btn-red:hover {
     top: 30px;
 }
 
-.tab-1 {}
-
 .tab-2 {
     display: none;
 }
@@ -243,10 +241,9 @@ a.btn-red:hover {
     display: none;
 }
 
-.active {}
-
-
-.feature-tab {}
+.feature-tab{
+    position: relative;
+}
 
 .radius-2 {
     background-color: var(--Blue-600);
@@ -459,6 +456,7 @@ a.btn-red:hover {
 .accordion-content.active {
     display: flex;
     flex-direction: column;
+    transition-delay: ease-in-out 0.3s;
 }
 
 .accordion-content p {
@@ -598,6 +596,16 @@ svg:hover {
         padding: 100px 0;
     }
 
+    .logo-first.active {
+        display: none;
+    }
+
+    .logo-second.active {
+        display: block;
+        position: relative;
+        z-index: 10;
+    }
+
     .nav-links {
         background-color: var(--Blue-950);
         position: absolute;
@@ -609,7 +617,7 @@ svg:hover {
         left: 0;
         right: 0;
         opacity: 0.95;
-        height: 100%;
+        height: 69%;
     }
 
     .nav-links.active {
