@@ -702,6 +702,12 @@ svg:hover {
         padding: 0 20px;
     }
 
+        .tab-1-button.active:after,
+        .tab-2-button.active:after,
+        .tab-3-button.active:after{
+        bottom: -45rem;
+        }
+
     .firefox,
     .opera {
         margin-top: 0;
