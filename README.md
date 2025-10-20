@@ -29,8 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [https://bmark-landing-page.netlify.app/](https://your-live-site-url.com)
+- Live Site URL: [https://bmark-landing-page.netlify.app/](Netlify)
 
 ## My process
 
@@ -44,28 +43,12 @@ Users should be able to:
 ### What I learned
 
 
-To see how you can add code snippets, see below:
-
-```html
-
-```
-```css
-
-```
-```js
-
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
 ### Continued development
 
 
 ### Useful resources
 
-- [Example resource 1]() - 
-- [Example resource 2]() - 
-
+- [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration](Mozilla) - I used the MDN resource to help myself out with choosing to either use the foreach and for loop concept to achieve the open and close toggle for the FAQ menu. Another helpful idea that came from the resource was using let to assigned arrays for displaying the different bookmarks provided.
 
 ## Author
 

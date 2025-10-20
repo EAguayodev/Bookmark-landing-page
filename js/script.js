@@ -77,4 +77,50 @@ for (let i = 0; i < faqItems.length; i++) {
 // form validation for email submission & displaying error message if email is invalid, not in correct format, empty, or missing "@" symbol
 const form = document.getElementById("sb-19832");
 const emailInput = document.querySelector('.email-submit');
-const errorMessage = document.querySelector('.error-display');
+const errorMessage = document.querySelector('#error-display');
+const iconError = document.querySelector('.icon-error');
+
+form.addEventListener('submit', function (event) {
+    const emailValue = emailInput.value;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  // Basic email format pattern
+
+    if (!emailPattern.test(emailValue)) {
+        event.preventDefault();  // Prevent form submission
+        errorMessage.classList.add('active');
+        iconError.classList.add('active');
+        emailInput.style.border = "2px solid #FA5959";  // Red border for input field
+    } else if (!emailPattern.test(emailValue)) {
+        errorMessage.classList.add("active");
+        errorMessage.style.backgroundColor = "#FA5959";
+        iconError.classList.add('active');
+        emailInput.style.border = "2px solid #FA5959";
+    } else {
+        errorMessage.textContent = "Thank you for subscribing!";
+        errorMessage.classList.add("success");
+        // Clear error message
+        // Display success message
+        // fetch airtable link here to store email submissions
+        fetch("https://api.airtable.com/v0/YOUR_BASE_ID/YOUR_TABLE_NAME", {
+            method: "POST",
+            headers: {
+                Authorization: "Bearer YOUR_API_KEY",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                fields: {
+                    emailPattern: emailValue
+                }
+            })
+        })
+        .then(response => {
+            if (response.ok) {
+                alert("Thank you for subscribing!");
+            } else {
+                throw new Error("Failed to submit email");
+            }
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    }
+});

@@ -18,12 +18,14 @@
 }
 
 .attribution {
+    color: hsl(0, 0%, 100%);
     font-size: 11px;
     text-align: center;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
 }
 
 body {
@@ -75,8 +77,6 @@ a.btn-red:hover {
     border: 2px solid var(--Red-400);
     color: var(--Red-400);
 }
-
-.login {}
 
 .mobile-menu-toggle {
     display: none;
@@ -169,7 +169,6 @@ a.btn-red:hover {
     overflow-x: hidden;
 }
 
-.features-container {}
 
 .features-heading-box {
     display: flex;
@@ -222,15 +221,17 @@ a.btn-red:hover {
     align-items: center;
 }
 
-.tab-1-button:after {
+.tab-1-button.active:after,
+.tab-2-button.active:after,
+.tab-3-button.active:after {
     content: "";
     display: block;
     background-color: var(--Red-400);
     transition: all 0.3s ease-in-out;
-    width: 243px;
+    width: 150px;
     height: 4px;
-    position: relative;
-    top: 30px;
+    position: absolute;
+    bottom: -30rem;
 }
 
 .tab-2 {
@@ -241,7 +242,7 @@ a.btn-red:hover {
     display: none;
 }
 
-.feature-tab{
+.feature-tab {
     position: relative;
 }
 
@@ -313,10 +314,6 @@ a.btn-red:hover {
 .tab-description-3 {
     display: none;
 }
-
-.download-sectiion {}
-
-.download-container {}
 
 .download-row {
     display: flex;
@@ -391,8 +388,6 @@ a.btn-red:hover {
     border: 1px solid var(--Blue-600);
     color: var(--Blue-600);
 }
-
-.faq-section {}
 
 .faq-row {
     display: flex;
@@ -488,8 +483,6 @@ a.btn-red:hover {
     padding: 80px 0;
 }
 
-.join-container {}
-
 .join-row {
     display: flex;
     flex-direction: column;
@@ -526,6 +519,26 @@ a.btn-red:hover {
     position: relative;
     left: 17rem;
     top: -1.9rem;
+}
+
+.icon-error.active {
+    display: block;
+}
+
+#error-display {
+    display: none;
+    position: relative;
+    background-color: var(--Red-400);
+    padding: 5px 20px;
+    top: -1.3rem;
+}
+
+#error-display.active {
+    display: block;
+}
+
+#error-display.success {
+    background-color: hsl(154, 59%, 51%);
 }
 
 .btn-contact {
@@ -726,10 +739,26 @@ svg:hover {
         padding: 0 20px;
     }
 
+    .illustration--hero {
+        width: 42%;
+        position: relative;
+        left: 18.5rem;
+        z-index: -1;
+    }
+
+    .radius-1 {
+        left: 25rem;
+    }
+
     .features-section ul {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+    }
+
+    .feature-tab {
+        left: 22rem;
+        width: 30%;
     }
 
     .tab-description {
