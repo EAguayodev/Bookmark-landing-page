@@ -68,7 +68,7 @@ for (let i = 0; i < faqItems.length; i++) {
   });
 }
 
-// :TODO: Fix googlesheets form submission
+
 const form = document.getElementById("sb-19832");
 const emailInput = document.querySelector(".email-submit");
 const errorMessage = document.querySelector("#error-display");
@@ -93,7 +93,7 @@ form.addEventListener("submit", function (event) {
     iconError.classList.add("active");
     emailInput.style.border = "2px solid #FA5959";
   } else {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
     errorMessage.innerText = "Thank you for subscribing!";
     errorMessage.classList.add("success");
     iconError.classList.remove("active");
