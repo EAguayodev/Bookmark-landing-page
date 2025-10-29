@@ -675,9 +675,6 @@ svg:hover {
         display: none;
     }
 
-    /* .icon-open.active {
-        display: none;
-    } */
 
     .manager-container {
         flex-direction: column;
@@ -764,7 +761,14 @@ svg:hover {
     .tab-1-button.active:after,
     .tab-2-button.active:after,
     .tab-3-button.active:after {
-        bottom: -45rem;
+        content: "";
+        display: none;
+        background-color: var(--Red-400);
+        transition: all 0.3s ease-in-out;
+        width: 150px;
+        height: 4px;
+        position: absolute;
+        bottom: -30rem;
     }
 
     .tab-description {
