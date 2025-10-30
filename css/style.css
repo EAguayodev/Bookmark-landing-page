@@ -182,8 +182,7 @@ a.btn-red:hover {
     display: block;
     width: 730px;
     height: 4px;
-    background-color: var(--Grey-50);
-    margin-top: 1rem;
+    background-color: var(--Grey-50);margin-top: 1rem;
     margin-bottom: 5rem;
 }
 
@@ -230,8 +229,8 @@ a.btn-red:hover {
     transition: all 0.3s ease-in-out;
     width: 150px;
     height: 4px;
-    position: absolute;
-    bottom: -30rem;
+    position: relative;
+    top: 1.5rem;
 }
 
 .tab-2 {
@@ -262,8 +261,6 @@ a.btn-red:hover {
     font-size: 2rem;
     margin-bottom: 1.5rem;
 }
-
-.tab-title-1 {}
 
 .tab-description {
     color: var(--Grey-600);
@@ -762,13 +759,10 @@ svg:hover {
     .tab-2-button.active:after,
     .tab-3-button.active:after {
         content: "";
-        display: none;
         background-color: var(--Red-400);
         transition: all 0.3s ease-in-out;
         width: 150px;
         height: 4px;
-        position: absolute;
-        bottom: -30rem;
     }
 
     .tab-description {
