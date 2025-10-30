@@ -17,19 +17,19 @@ hamburger.addEventListener("click", function () {
 
 const featureButtons = document.querySelectorAll(".tab");
 
-let featureTitles = [
+const featureTitles = [
   "Bookmark in one click",
   "Intelligent search",
   "Share your bookmarks",
 ];
 
-let featureTexts = [
+const featureTexts = [
   "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.",
   "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.",
   "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
 ];
 
-let featureImages = [
+const featureImages = [
   "images/illustration-features-tab-1.svg",
   "images/illustration-features-tab-2.svg",
   "images/illustration-features-tab-3.svg",
@@ -74,8 +74,7 @@ const emailInput = document.querySelector(".email-submit");
 const errorMessage = document.querySelector("#error-display");
 const iconError = document.querySelector(".icon-error");
 const submitButton = document.querySelector("#contact-submit");
-const scriptURL =
-  "https://script.google.com/macros/s/AKfycbw9a8FupUfY7tnPLQ5EhUcAXpMR2rT7jmw03wcJ1JAYBRJMRFGOHut9CM_e5utyErk/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbw9a8FupUfY7tnPLQ5EhUcAXpMR2rT7jmw03wcJ1JAYBRJMRFGOHut9CM_e5utyErk/exec";
 
 form.addEventListener("submit", function (event) {
   const emailValue = emailInput.value;
