@@ -592,7 +592,7 @@ footer .row {
 
 svg:hover {
     fill: hsl(0, 94%, 66%);
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 
 /* Tablet */
