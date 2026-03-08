@@ -60,11 +60,10 @@ const arrow = document.querySelectorAll(".icon-arrow");
 for (let i = 0; i < faqItems.length; i++) {
   const faqItem = faqItems[i];
   const faqContent = faqContents[i];
+  const arrowIcon = arrow[i];
   faqItem.addEventListener("click", function () {
     faqContent.classList.toggle("active");
-    arrow[i].style.transform = faqContent.classList.contains("active")
-      ? "rotate(180deg)"
-      : "rotate(0deg)";
+    arrowIcon.classList.toggle("active");
   });
 }
 
@@ -102,13 +101,13 @@ form.addEventListener("submit", function (event) {
       method: "POST",
       body: new FormData(form)
     })
-    .then((response) => {
-      if (response.ok) {
-        alert("Thank you for subscribing!");
-      } else {
-        throw new Error("Failed to submit email");
-      }
-    })
+    // .then((response) => {
+    //   if (response.ok) {
+    //     alert("Thank you for subscribing!");
+    //   } else {
+    //     throw new Error("Failed to submit email");
+    //   }
+    // })
     .catch((error) => {
       console.error(error);
     });

@@ -344,6 +344,7 @@ a.btn-red:hover {
 .extension-cards {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .extension-card {
@@ -445,10 +446,14 @@ a.btn-red:hover {
     padding: 0 1rem 1rem 1rem;
 }
 
-.accordion-content.active {
+.accordion-content.active{
     display: flex;
     flex-direction: column;
     transition-delay: ease-in-out 0.3s;
+}
+
+.icon-arrow.active{
+    transform: rotate(180deg);
 }
 
 .accordion-content p {
